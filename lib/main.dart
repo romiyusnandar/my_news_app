@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_news_2/views/login_page.dart';
+import 'package:my_news_2/views/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const LoginPage(),
+      home: const SplashScreen(),
     );
   }
 }
