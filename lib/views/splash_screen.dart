@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_news_2/views/introduction_page.dart';
 import 'package:my_news_2/views/login_page.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const LoginPage(),
+          builder: (context) => const IntroductionPage(),
         ),
       );
     });
