@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_news_2/main.dart';
 import 'register_page.dart';
 
@@ -27,25 +28,25 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       'Hello',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 36,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const Text(
+                    Text(
                       'Again',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 36,
                         fontWeight: FontWeight.bold,
                         color: Color(0xFF2D2E82)
                       ),
                     ),
                     const SizedBox(height: 8),
-                    const Text(
+                    Text(
                       'Welcome back, you\'ve been missed',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 16,
                         color: Colors.grey,
                       ),
@@ -76,15 +77,15 @@ class _LoginPageState extends State<LoginPage> {
                         TextButton(
                           onPressed: () {
                             ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content: Text('Forgot Password? clicked'),
+                              SnackBar(
+                                content: Text('Forgot Password? clicked', style: GoogleFonts.poppins(),),
                                 backgroundColor: Colors.red,
                               ),
                             );
                           },
-                          child: const Text(
+                          child: Text(
                             'Forgot Password?',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                               color: Colors.red,
                               fontWeight: FontWeight.bold,
                             ),
@@ -121,9 +122,9 @@ class _LoginPageState extends State<LoginPage> {
                         // );
                         showSuccessDialog(context);
                       },
-                      child: const Text(
+                      child: Text(
                         'Login',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
@@ -135,7 +136,7 @@ class _LoginPageState extends State<LoginPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text('Don\'t have an account?'),
+                      Text('Don\'t have an account?', style: GoogleFonts.poppins(),),
                       const SizedBox(width: 4),
                       GestureDetector(
                         onTap: () {
@@ -145,9 +146,9 @@ class _LoginPageState extends State<LoginPage> {
                             MaterialPageRoute(builder: (context) => const RegisterPage()),
                           );
                         },
-                        child: const Text(
+                        child: Text(
                           'Register',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF2D2E82),
                             decoration: TextDecoration.underline,
@@ -171,11 +172,11 @@ class _LoginPageState extends State<LoginPage> {
     return RichText(
       text: TextSpan(
         text: '* ',
-        style: const TextStyle(color: Colors.red),
+        style: GoogleFonts.poppins(color: Colors.red, fontWeight: FontWeight.normal),
         children: [
           TextSpan(
             text: text,
-            style: const TextStyle(color: Colors.black),
+            style: GoogleFonts.poppins(color: Colors.black, fontWeight: FontWeight.normal),
           ),
         ],
       ),
@@ -192,6 +193,7 @@ class _LoginPageState extends State<LoginPage> {
     return TextFormField(
       autovalidateMode: AutovalidateMode.onUserInteraction,
       obscureText: obscureText,
+      style: GoogleFonts.poppins(),
       validator: (value) {
         if (value == null || value.isEmpty) {
           return 'Please enter your $hint';
@@ -243,9 +245,9 @@ class _LoginPageState extends State<LoginPage> {
                   color: Color(0xFF2D2E82),
                 ),
                 const SizedBox(height: 20),
-                const Text(
+                Text(
                   'Login Successful !',
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF2D2E82),
@@ -259,9 +261,9 @@ class _LoginPageState extends State<LoginPage> {
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
-                  child: const Text(
+                  child: Text(
                     'OK',
-                    style: TextStyle(color: Colors.white),
+                    style: GoogleFonts.poppins(color: Colors.white),
                   ),
                   onPressed: () {
                     Navigator.pop(context);
@@ -279,5 +281,3 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
-
-

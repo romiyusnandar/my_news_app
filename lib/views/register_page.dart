@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'login_page.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -26,17 +27,17 @@ class _RegisterPageState extends State<RegisterPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       'Hello',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 36,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     const SizedBox(height: 8),
-                    const Text(
+                    Text(
                       'Signup to get started',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 16,
                         color: Colors.grey,
                       ),
@@ -99,9 +100,9 @@ class _RegisterPageState extends State<RegisterPage> {
                         // );
                         showSuccessDialog(context);
                       },
-                      child: const Text(
+                      child: Text(
                         'Register',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
@@ -113,7 +114,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text('Already have an account? '),
+                      Text('Already have an account? ', style: GoogleFonts.poppins(),),
                       GestureDetector(
                         onTap: () {
                           print('I was tapped ');
@@ -122,9 +123,9 @@ class _RegisterPageState extends State<RegisterPage> {
                             MaterialPageRoute(builder: (context) => const LoginPage()),
                           );
                         },
-                        child: const Text(
+                        child: Text(
                           'Login',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF2D2E82),
                             decoration: TextDecoration.underline,
@@ -148,11 +149,11 @@ class _RegisterPageState extends State<RegisterPage> {
     return RichText(
       text: TextSpan(
         text: '* ',
-        style: const TextStyle(color: Colors.red),
+        style: GoogleFonts.poppins(color: Colors.red),
         children: [
           TextSpan(
             text: text,
-            style: const TextStyle(color: Colors.black),
+            style: GoogleFonts.poppins(color: Colors.black),
           ),
         ],
       ),
@@ -169,6 +170,7 @@ class _RegisterPageState extends State<RegisterPage> {
     return TextFormField(
       autovalidateMode: AutovalidateMode.onUserInteraction,
       obscureText: obscureText,
+      style: GoogleFonts.poppins(),
       validator: (value) {
         if (value == null || value.isEmpty) {
           return 'Please enter your $hint';
@@ -220,9 +222,9 @@ class _RegisterPageState extends State<RegisterPage> {
                   color: Color(0xFF2D2E82),
                 ),
                 const SizedBox(height: 20),
-                const Text(
+                Text(
                   'Sign Up Successful !',
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF2D2E82),
@@ -236,9 +238,9 @@ class _RegisterPageState extends State<RegisterPage> {
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
-                  child: const Text(
+                  child: Text(
                     'OK',
-                    style: TextStyle(color: Colors.white),
+                    style: GoogleFonts.poppins(color: Colors.white),
                   ),
                   onPressed: () {
                     Navigator.pop(context);
